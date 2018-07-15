@@ -1,0 +1,16 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+body {
+	background-color: #fafafa;
+}
+
+.btn {
+	padding: 1px 10px;
+    border-radius: 3px;
+    margin: 3px 5px;	
+}
+
+.required-validation {
+	color: #a94442;
+	margin-left: 5px;
+}

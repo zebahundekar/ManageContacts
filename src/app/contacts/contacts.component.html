@@ -1,0 +1,53 @@
+<table class="contacts">
+<tr>
+	<td class="contacts-list">
+		<h3> Contacts list: </h3>
+		<div>
+			<span *ngFor="let contact of contacts"> 
+			<div *ngIf="contact.IsActive">
+			<div class="contact-name"> {{ contact.FirstName + " " + contact.LastName }} </div>
+			<div class="contact-operations">
+				<button class="btn" (click)="ShowEditContactForm(contact)">Edit</button>
+				<button class="btn" (click)="DeleteContact(contact)">Delete</button>
+			</div>
+		</div>
+		</span>
+	  </div>
+	  <button class="btn add-contact-btn" (click)="ShowAddContactForm()">Add Contact</button>
+	 </td>
+	 
+	 <td *ngIf="editContact" class="edit-contacts-form">
+		<h3> Edit Contact:</h3>
+		<form (ngSubmit)="SaveContact(contact)" #editContactForm="ngForm">
+			<label> First Name: </label>
+			<input type="text" name="contact.FirstName" [(ngModel)]="contact.FirstName" required #name="ngModel"/>
+			<span [hidden]="name.valid" class="required-validation">First Name is required</span><br/>
+			<label> Last Name: </label>
+			<input type="text" name="contact.LastName" [(ngModel)]="contact.LastName"/><br/>
+			<label> Email: </label>
+			<input type="email" name="contact.Email" [(ngModel)]="contact.Email"/><br/>
+			<label> Phone Number: </label>
+			<input type="text" name="contact.PhoneNumber" [(ngModel)]="contact.PhoneNumber"/><br/>
+			<label> Status: </label>
+			<span class="contact-status">{{ contact.IsActive }}</span>
+			<button type="submit" class="btn btn-success" [disabled]="!editContactForm.form.valid">Save Changes</button>
+		</form>
+	</td>
+	<td *ngIf="addNewContact" class="add-contacts-form">
+		<h3> Add Contact:</h3>
+		<form (ngSubmit)="AddContact(contact)" #addContactForm="ngForm">
+			<label> First Name: </label>
+			<input type="text" name="contact.FirstName" [(ngModel)]="contact.FirstName" required #name="ngModel"/>
+			<span [hidden]="name.valid" class="required-validation">First Name is required</span><br/>
+			<label> Last Name: </label>
+			<input type="text" name="contact.LastName" [(ngModel)]="contact.LastName"/><br/>
+			<label> Email: </label>
+			<input type="email" name="contact.Email" [(ngModel)]="contact.Email"/><br/>
+			<label> Phone Number: </label>
+			<input type="text" name="contact.PhoneNumber" [(ngModel)]="contact.PhoneNumber"/><br/>			
+			<button type="submit" class="btn btn-success" [disabled]="!addContactForm.form.valid">Save Changes</button>
+		</form>
+	</td>
+	</tr>
+</table>
+

@@ -1,0 +1,47 @@
+.contacts {
+	margin: 20px 30px;
+	width: 90%;
+}
+
+.contacts-list {
+	vertical-align: top;	
+	width: 35%;
+}
+
+.contact-name,
+.contact-operations {
+	display: inline-block;
+}
+
+.contact-name {
+	width: 150px;
+}
+
+.edit-contacts-form label,
+.add-contacts-form label {
+	width: 110px;
+    min-width: 110px;
+    display: inline-block;
+}
+
+.edit-contacts-form input,
+.add-contacts-form input,
+.contact-status {
+	margin: 5px;
+}
+
+.edit-contacts-form button,
+.add-contacts-form button,
+.add-contact-btn {
+	margin-left: 0px;
+    margin-top: 20px;
+	display: block;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
