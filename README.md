@@ -1,27 +1,17 @@
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This is a POC for managing contacts, undergone as an assignment for Evolent Health.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+# Navigation Details:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Landing Page: Lists a set of Default Contacts with options of Editing/Deleting the contact.
+2. 'Edit' Button: Opens up a form which enables the user to edit the respective contact.
+3. 'Delete' Button: Deletes the respective contact and removes from the Contact list.
+4. 'Add Contact' Button: Opens up a new form which enables user to add a new Contact. On saving the changes, this new contact is added to the Contact list.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Validation: First Name cannot be blank.
