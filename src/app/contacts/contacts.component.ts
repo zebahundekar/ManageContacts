@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class ContactsComponent implements OnInit {
 
-  contacts: Array<ContactInfo>;
-  contact: ContactInfo;
+  contacts = [];
+  contact = {};
   addNewContact: Boolean;
   editContact: Boolean;
   
@@ -58,13 +58,4 @@ export class ContactsComponent implements OnInit {
 	  this.editContact = false;	
 	  this.contact = {};
   }  
-}
-
-export module ContactInfo {
-	FirstName: String;
-	LastName: String;
-	Email: String;
-	PhoneNumber: Number;
-	Id: Number;
-	IsActive: Boolean;
 }
