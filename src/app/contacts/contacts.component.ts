@@ -21,7 +21,9 @@ export class ContactsComponent implements OnInit {
 	  this.addNewContact = false;
 	  this.editContact = false;
   }
-
+  
+  ngOnInit() {}
+  
   ShowEditContactForm(contact) {
 	  this.editContact = true;
 	  this.addNewContact = false;	  
